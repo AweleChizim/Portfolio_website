@@ -117,6 +117,24 @@ nav ul li a:hover::after {
     background: var(--primary-color);
 }
 
+#menu-toggle-checkbox {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: var(--primary-color);
+    order: 2;
+    z-index: 1001;
+    line-height: 1;
+}
+
+#menu-toggle-checkbox:checked ~ ul {
+    display: flex !important;
+}
+
 .btn {
     display: inline-block;
     margin: 15px 10px 0 0;
@@ -451,5 +469,37 @@ footer {
 
     .project-details-grid {
         grid-template-columns: 1fr;
+    }
+
+    .menu-toggle-label {
+        display: block;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--background-dark);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+        overflow-y: auto;
+        max-height: calc(100vh - 60px);
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
     }
 }
