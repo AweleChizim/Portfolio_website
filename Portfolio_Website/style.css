@@ -1,9 +1,10 @@
-/* Custom properties for easy color changes */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700;900&display=swap');
+
 :root {
-    --primary-color: #FFD700; /* Deep Gold */
-    --secondary-color: #333333; /* Dark Gray/Black complement */
-    --background-dark: #121212; /* Nearly Black */
-    --background-light: #222222; /* Darker background for contrast */
+    --primary-color: #FFD700;
+    --secondary-color: #333333;
+    --background-dark: #121212;
+    --background-light: #222222;
     --text-color-light: #f5f5f5;
     --text-color-dark: #0a0a0a;
     --shadow-color: rgba(255, 215, 0, 0.3);
@@ -13,7 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playwrite NZ Guides', cursive;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
 }
 
 body {
@@ -22,19 +24,30 @@ body {
     line-height: 1.6;
 }
 
-/* --- Global Elements --- */
+strong {
+    font-weight: 700;
+}
 
 h1, h2, h3, h4 {
+    font-family: "Playwrite NZ Guides", cursive;
     color: var(--primary-color);
     margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 section {
     padding: 80px 10%;
     min-height: 50vh;
 }
-
-/* --- Header and Navigation --- */
 
 header {
     background: var(--background-light);
@@ -53,14 +66,15 @@ nav {
 
 .logo {
     font-size: 1.8em;
-    font-weight: 1200;
+    font-weight: 700;
     color: var(--primary-color);
     display: flex;
     align-items: center;
+    font-family: 'Playfair Display', serif;
 }
 
 .logo img {
-    height: 30px; /* Adjust as needed for your logo image */
+    height: 30px;
     margin-right: 10px;
 }
 
@@ -103,8 +117,6 @@ nav ul li a:hover::after {
     background: var(--primary-color);
 }
 
-/* --- Buttons --- */
-
 .btn {
     display: inline-block;
     margin: 15px 10px 0 0;
@@ -117,6 +129,7 @@ nav ul li a:hover::after {
     transition: all 0.3s ease;
     border: 2px solid var(--primary-color);
     box-shadow: 0 5px 15px var(--shadow-color);
+    font-family: 'Playfair Display', serif;
 }
 
 .btn:hover {
@@ -126,8 +139,6 @@ nav ul li a:hover::after {
     transform: translateY(-2px);
 }
 
-/* --- Hero Section (Home) --- */
-
 .hero {
     height: 90vh;
     display: flex;
@@ -135,7 +146,7 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('images/background.jpg') no-repeat center center/cover; /* Placeholder */
+    background: url('images/background.jpg') no-repeat center center/cover;
     background-blend-mode: overlay;
     position: relative;
 }
@@ -147,19 +158,20 @@ nav ul li a:hover::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .hero * {
-    z-index: 1; /* Ensure text is above the overlay */
+    z-index: 1;
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     color: var(--text-color-light);
 }
 
 .hero h1 span {
+    font-size: 1.5em;
     color: var(--primary-color);
 }
 
@@ -186,7 +198,7 @@ nav ul li a:hover::after {
     min-width: 250px;
     height: 250px;
     object-fit: cover;
-    border-radius: 50%; /* Make profile picture round */
+    border-radius: 50%;
     border: 5px solid var(--primary-color);
     box-shadow: 0 0 20px var(--shadow-color);
 }
@@ -202,12 +214,12 @@ nav ul li a:hover::after {
 }
 
 .project-grid {
-    display: flex; /* Use flexbox for horizontal scrolling */
-    overflow-x: auto; /* Enable horizontal scrolling */
+    display: flex;
+    overflow-x: auto;
     gap: 30px;
-    padding-bottom: 20px; /* Space for scrollbar */
-    scroll-snap-type: x mandatory; /* Optional: Snap to project cards */
-    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .project-grid::-webkit-scrollbar {
@@ -257,7 +269,7 @@ nav ul li a:hover::after {
 
 .contact-subtitle {
     color: var(--text-color-light);
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
     font-size: 1.1em;
 }
 
@@ -276,13 +288,13 @@ nav ul li a:hover::after {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px; 
-    max-width: 800px; 
+    gap: 20px;
+    max-width: 800px;
     margin: 0 auto 50px auto;
 }
 
 .grid .btn {
-    width: 100%; 
+    width: 100%;
     margin: 0;
 }
 
@@ -292,7 +304,7 @@ nav ul li a:hover::after {
     gap: 40px;
     margin-top: 30px;
     padding-top: 30px;
-    border-top: 1px solid var(--secondary-color); 
+    border-top: 1px solid var(--secondary-color);
 }
 
 .detail-item {
@@ -372,7 +384,7 @@ footer {
     margin-bottom: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-left: 5px solid var(--primary-color); 
+    border-left: 5px solid var(--primary-color);
 }
 
 .project-section-card:hover {
@@ -413,6 +425,13 @@ footer {
     left: 0;
     font-size: 0.9em;
     line-height: 1.8;
+}
+
+.project-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 @media (max-width: 768px) {
