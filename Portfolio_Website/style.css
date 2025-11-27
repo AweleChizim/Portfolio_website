@@ -363,14 +363,31 @@ footer {
 }
 
 .project-header nav {
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.project-header nav ul {
+    display: contents;
+    position: static;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.project-header nav ul li {
+    margin: 0;
+}
+
+.project-header .menu-toggle-label {
+    display: none;
 }
 
 .project-details-hero {
     background: var(--background-light);
     color: var(--text-color-light);
     text-align: center;
-    padding: 60px 10%;
+    padding-top: 100px;
+    padding-bottom: 50px;
     border-bottom: 3px solid var(--primary-color);
 }
 
@@ -464,7 +481,8 @@ footer {
     }
     
     .project-details-hero {
-        padding: 40px 5%;
+        padding-top: 90px;
+        padding-bottom: 80px;
     }
 
     .project-details-grid {
